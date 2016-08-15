@@ -1,0 +1,16 @@
+language: python
+python:
+  - '3.5'
+install: pip install -r requirements.txt
+script:
+  - python setup.py bdist_wheel
+deploy:
+  - provider: pypi
+    distributions: sdist bdist_wheel
+    user: ti250
+    password:
+      secure: cIzgf1gQGQZQR5JtsyUA4yoL2NgDqxxKe+aH3wYSLVxD3VBsIpHTuAzDljTGcQQmm6dVdr2hfDfG72bnrhmErT2T5xACy4VR0yykiOPcUFyyNonALxfGPbrteXE6ABx+vTqhXDdWWWwQ/8ybg9MZ/SWNbMxr/4gDKlP48l7OoULmGChieHdthXWb7/bPqpp8t3pJZtuHYUxXL3maH9gr7yqw1KLGBDX1+w/hPXVkKUED5xd+3Hi09ol9dLrVD/4S9kq4upHNDR2eLJYZ5yWAXF0qb14yORR/Dy9pdXgS9rfT9l4QIjFTIRoUB2FSqPDSDN/af9cV7mDpfqTynS6d6Ecgevj8qIliYl0Ci2KWOuYS3JeN4cbjIYuWdnND2f/pGv5DVWnb9S0l+4ma8HkCK+LgMO0rIzbU2QHgkSaqh9xqLzhwd0MDpdeGTEh1OARjBi4BmM5EK1jPC8XLiNWwaj3enhdeN/QWeh9Z4dDzSuyGbIS2nySxFdE0RO/WuHIG6lbRMWTL53Xfz1rIGRNevULT4MN81R0rYUvyKk9Vgbh8EGOR7WPCNRvTq6Xh4a42lmSM4Lb6uP2bMr4BX4dZ0htW9d7+o8J9TQIIGevhKDej4GatXrq9YC4Xn5kHb9zm88ElgfMK0PRKvg6Ix3jlzmfqBhlKfTUMiJpONDtj6Bk=
+    on:
+      branch: master
+      tags: true
+      condition: $TRAVIS_PYTHON_VERSION = "3.5"

@@ -12,9 +12,9 @@ cmds = versioneer.get_cmdclass()
 setup(
     version=versioneer.get_version(),
     cmdclass=cmds,
-    name='PyCav',
+    name='notificationcenter',
 
-    description='PyCav module',
+    description='Port of NSNotificationCenter functionality to Python',
     long_description=long_description,
 
     url='',
