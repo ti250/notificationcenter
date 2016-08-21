@@ -7,7 +7,7 @@ This package implements a class similar to NSNotificationCenter, a variant of th
 It consists of one singleton class, NotificationCenter, that is used to add observers and to post notifications. To add an observer, you need to do the following:
 
 ```python
-from notificationcenter import *
+from NotificationCenter import *
 
 # Get the NotifiationCenter
 notificationcenter = NotificationCenter()
